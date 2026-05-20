@@ -108,17 +108,17 @@ status:
 
 # Internal target to create analog structure
 _create_analog_structure:
-	@mkdir -p $(ANALOG_DIR)/build $(ANALOG_DIR)/layout $(ANALOG_DIR)/schematics $(ANALOG_DIR)/symbols
-	@if [ ! -d "$(ANALOG_DIR)/library" ]; then \
-		mkdir -p $(ANALOG_DIR)/library && \
-		git clone $(ANALOG_LIB_REPO) $(ANALOG_DIR)/library/; \
+	@mkdir -p $(ANALOG_DIR)/$(PROJECT_NAME)/build $(ANALOG_DIR)/$(PROJECT_NAME)/layout $(ANALOG_DIR)/$(PROJECT_NAME)/schematics/testbenches $(ANALOG_DIR)/$(PROJECT_NAME)/symbols
+	@if [ ! -d "$(ANALOG_DIR)/$(PROJECT_NAME)/library" ]; then \
+		mkdir -p $(ANALOG_DIR)/$(PROJECT_NAME)/library && \
+		git clone $(ANALOG_LIB_REPO) $(ANALOG_DIR)/$(PROJECT_NAME)/library/; \
 	fi
-	@sed 's/@PROJECT_NAME@/$(PROJECT_NAME)/g' analog/build/config.mk.template > $(ANALOG_DIR)/build/config.mk
-	@cd $(ANALOG_DIR)/build && \
+	@sed 's/@PROJECT_NAME@/$(PROJECT_NAME)/g' analog/build/config.mk.template > $(ANALOG_DIR)/$(PROJECT_NAME)/build/config.mk
+	@cd $(ANALOG_DIR)/$(PROJECT_NAME)/build && \
 		mkdir -p layout schematic validation && \
-		cp -r ../../flows/analog/build/layout/* ./layout/ 2>/dev/null || true && \
-		cp -r ../../flows/analog/build/schematic/* ./schematic/ 2>/dev/null || true && \
-		cp -r ../../flows/analog/build/validation/* ./validation/ 2>/dev/null || true
+		cp -r ../../../flows/analog/build/layout/* ./layout/ 2>/dev/null || true && \
+		cp -r ../../../flows/analog/build/schematic/* ./schematic/ 2>/dev/null || true && \
+		cp -r ../../../flows/analog/build/validation/* ./validation/ 2>/dev/null || true
 
 # Internal target to create digital structure
 _create_digital_structure:

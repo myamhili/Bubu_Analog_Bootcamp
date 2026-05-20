@@ -1,0 +1,37 @@
+* NGSPICE file created from bootcamp_opamp.ext - technology: sky130A
+
+.subckt sky130_fd_pr__nfet_01v8_KVHNGM a_50_n42# a_n108_n42# a_n50_n130# VSUBS
+X0 a_50_n42# a_n50_n130# a_n108_n42# VSUBS sky130_fd_pr__nfet_01v8 ad=0.1218 pd=1.42 as=0.1218 ps=1.42 w=0.42 l=0.5
+.ends
+
+.subckt sky130_fd_pr__pfet_01v8_RKZYSA a_n158_n89# a_n100_n186# a_100_n89#
+X0 a_100_n89# a_n100_n186# a_n158_n89# w_n194_n189# sky130_fd_pr__pfet_01v8 ad=0.2581 pd=2.36 as=0.2581 ps=2.36 w=0.89 l=1
+.ends
+
+.subckt sky130_fd_pr__cap_mim_m3_1_U3KX6Z c1_n1050_n1250# m3_n1150_n1350#
+X0 c1_n1050_n1250# m3_n1150_n1350# sky130_fd_pr__cap_mim_m3_1 l=12.5 w=10
+.ends
+
+.subckt sky130_fd_pr__pfet_01v8_7D9MVY a_50_n524# a_n108_n524# a_n50_n621#
+X0 a_50_n524# a_n50_n621# a_n108_n524# w_n144_n624# sky130_fd_pr__pfet_01v8 ad=1.5196 pd=11.06 as=1.5196 ps=11.06 w=5.24 l=0.5
+.ends
+
+.subckt sky130_fd_pr__nfet_01v8_H33S8M a_100_n483# a_n158_n483# a_n100_n571# VSUBS
+X0 a_100_n483# a_n100_n571# a_n158_n483# VSUBS sky130_fd_pr__nfet_01v8 ad=1.4007 pd=10.24 as=1.4007 ps=10.24 w=4.83 l=1
+.ends
+
+.subckt sky130_fd_pr__nfet_01v8_KKTGTE a_n100_n134# a_n158_n46# a_100_n46# VSUBS
+X0 a_100_n46# a_n100_n134# a_n158_n46# VSUBS sky130_fd_pr__nfet_01v8 ad=0.1334 pd=1.5 as=0.1334 ps=1.5 w=0.46 l=1
+.ends
+
+.subckt bootcamp_opamp VDPWR VGND
+Xsky130_fd_pr__nfet_01v8_KVHNGM_0 li_5208_1444# li_4426_1436# vin+ VSUBS sky130_fd_pr__nfet_01v8_KVHNGM
+Xsky130_fd_pr__nfet_01v8_KVHNGM_1 li_9216_1454# li_5208_1444# vin- VSUBS sky130_fd_pr__nfet_01v8_KVHNGM
+Xsky130_fd_pr__pfet_01v8_RKZYSA_0 VDPWR li_4426_1436# li_9216_1454# sky130_fd_pr__pfet_01v8_RKZYSA
+Xsky130_fd_pr__pfet_01v8_RKZYSA_1 VDPWR li_4426_1436# li_4426_1436# sky130_fd_pr__pfet_01v8_RKZYSA
+Xsky130_fd_pr__cap_mim_m3_1_U3KX6Z_0 vout li_9216_1454# sky130_fd_pr__cap_mim_m3_1_U3KX6Z
+Xsky130_fd_pr__pfet_01v8_7D9MVY_0 vout VDPWR li_9216_1454# sky130_fd_pr__pfet_01v8_7D9MVY
+Xsky130_fd_pr__nfet_01v8_H33S8M_0 VGND vout vbn VSUBS sky130_fd_pr__nfet_01v8_H33S8M
+Xsky130_fd_pr__nfet_01v8_KKTGTE_0 vbn VGND li_5208_1444# VSUBS sky130_fd_pr__nfet_01v8_KKTGTE
+.ends
+

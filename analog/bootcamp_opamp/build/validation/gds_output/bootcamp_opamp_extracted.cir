@@ -1,0 +1,19 @@
+* Extracted by KLayout with SKY130 LVS runset on : 18/05/2026 21:01
+
+.SUBCKT bootcamp_opamp vbn vgnd vout vin+ vin\x2d vdpwr sky130_gnd
+C$1 \$8 vout sky130_fd_pr__model__cap_mim C=2.5e-13 A=125 P=45
+M$2 vout vbn vgnd sky130_gnd sky130_fd_pr__nfet_01v8 L=1 W=4.83 AS=1.4007
++ AD=1.4007 PS=10.24 PD=10.24
+M$3 vgnd vbn \$3 sky130_gnd sky130_fd_pr__nfet_01v8 L=1 W=0.46 AS=0.1334
++ AD=0.1334 PS=1.5 PD=1.5
+M$4 \$3 vin\x2d \$8 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.5 W=0.42 AS=0.1218
++ AD=0.1218 PS=1.42 PD=1.42
+M$5 \$7 vin+ \$3 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.5 W=0.42 AS=0.1218
++ AD=0.1218 PS=1.42 PD=1.42
+M$6 vdpwr \$8 vout \$I9 sky130_fd_pr__pfet_01v8 L=0.5 W=5.24 AS=1.5196
++ AD=1.5196 PS=11.06 PD=11.06
+M$7 vdpwr \$7 \$7 \$I10 sky130_fd_pr__pfet_01v8 L=1 W=0.89 AS=0.2581 AD=0.2581
++ PS=2.36 PD=2.36
+M$8 vdpwr \$7 \$8 \$I11 sky130_fd_pr__pfet_01v8 L=1 W=0.89 AS=0.2581 AD=0.2581
++ PS=2.36 PD=2.36
+.ENDS bootcamp_opamp

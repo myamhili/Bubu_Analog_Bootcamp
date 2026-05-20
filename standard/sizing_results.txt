@@ -1,0 +1,35 @@
+OpAmp Variant: standard
+======================================================================
+
+Specifications:
+  GBW: 10.0 MHz
+  Phase Margin: 60°
+  Slew Rate: 10.0 V/μs
+  Load Capacitance: 1.0 pF
+  Supply Voltage: 1.8 V
+
+Transistor Sizing (μm):
+======================================================================
+M1: W=0.420μm, L=0.500μm, W/L=0.84
+M2: W=0.420μm, L=0.500μm, W/L=0.84
+M3: W=0.893μm, L=1.000μm, W/L=0.89
+M4: W=0.893μm, L=1.000μm, W/L=0.89
+M5: W=0.463μm, L=1.000μm, W/L=0.46
+M6: W=5.238μm, L=0.500μm, W/L=10.48
+M7: W=4.829μm, L=1.000μm, W/L=4.83
+
+Compensation Capacitor: 0.250 pF
+
+Performance:
+======================================================================
+  DC Gain (dB): 66.58
+  Av1 (dB): 34.54
+  Av2 (dB): 32.04
+  GBW (MHz): 10.61
+  Phase Margin (°): 59.07
+  Slew Rate (V/μs): 10.00
+  fp2 (MHz): 23.34
+  fz (MHz): 93.37
+  I_tail (μA): 2.50
+  I_out (μA): 14.67
+  Power (μW): 30.90

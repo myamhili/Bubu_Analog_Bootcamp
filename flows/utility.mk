@@ -2,12 +2,12 @@
 _status_analog:
 	@if [ "$(HAS_ANALOG)" = "1" ]; then \
 		echo "Analog Project:"; \
-		if [ -f "$(ANALOG_DIR)/build/config.mk" ]; then \
-			PROJ_NAME=$$(grep "^PROJECT" "$(ANALOG_DIR)/build/config.mk" | cut -d'=' -f2 | tr -d ' '); \
-			echo "  - $$PROJ_NAME (analog)"; \
-		else \
-			echo "  - analog project (no config found)"; \
-		fi; \
+		for proj in $(ANALOG_DIR)/*/; do \
+			if [ -d "$$proj" ]; then \
+				PROJ_NAME=$$(basename "$$proj"); \
+				echo "  - $$PROJ_NAME (analog)"; \
+			fi; \
+		done; \
 	fi
 
 _status_digital:
