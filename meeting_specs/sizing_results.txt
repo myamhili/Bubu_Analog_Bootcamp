@@ -1,0 +1,6 @@
+OpAmp Variant: meeting_specs
+======================================================================
+
+Specifications:
+  GBW: 50.0 MHz
+  Phase Margin: 60°
