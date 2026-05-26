@@ -1,20 +1,24 @@
-** sch_path: /mnt/c/Users/Hyun/Documents/GitHub/Bubu_Analog_Bootcamp/analog/bootcamp_opamp/build/schematic/mytb_impedance.sch
-**.subckt mytb_impedance
+** sch_path: /mnt/c/Users/Hyun/Documents/GitHub/Bubu_Analog_Bootcamp/analog/bootcamp_opamp/build/schematic/input_tb_impedance.sch
+**.subckt input_tb_impedance
 x1 VOUT VIN_P VIN_N VDD GND net1 myopamp
 VCM net2 GND DC 0.9V
 VDD VDD GND DC 1.8V
 VBIAS net1 GND DC 0.6V
-ITEST VOUT GND dc 0 ac 1
-VDIFF VIN_P net2 DC 0V
+C1 VOUT GND 1p m=1
+VDIFF VIN_P net2 dc 0 ac 1
+.save i(vdiff)
 R1 VIN_N net2 1Meg m=1
 R2 VIN_P net2 1Meg m=1
 **** begin user architecture code
 
 
+.save all
 .ac dec 100 0.1 1G
 .control
 run
-plot vdb(VOUT)
+let z_in = v(vin_p) / abs(i(vdiff))
+meas ac actual_input_impedance FIND z_in AT=1
+plot mag(z_in)
 .endc
 
 
