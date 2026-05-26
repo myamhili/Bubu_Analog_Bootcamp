@@ -5,12 +5,15 @@ VCM net2 GND DC 0.9V
 VDD VDD GND DC 1.8V
 VBIAS net1 GND DC 0.6V
 C1 VOUT GND 1p m=1
-VDIFF VIN_P net2 dc 0 ac 1
-R1 VIN_N net2 1M m=1
-R2 VIN_P net2 1M m=1
+VDIFF VIN_P net2 dc 0 ac 0
+.save i(vdiff)
+R1 VIN_N net2 1Meg m=1
+R2 VIN_P net2 1Meg m=1
+ITEST VOUT GND dc 0 ac 1
 **** begin user architecture code
 
 
+.save all
 .ac dec 100 0.1 1G
 .control
 run
