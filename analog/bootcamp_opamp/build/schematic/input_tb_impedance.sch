@@ -19,8 +19,8 @@ N -60 60 -60 160 {lab=#net1}
 N -260 0 -210 0 {lab=#net2}
 N -210 0 -210 50 {lab=#net2}
 N -210 -50 -210 0 {lab=#net2}
-N 0 -40 20 -40 {lab=VDD}
-N -0 -90 -0 -40 {lab=VDD}
+N 20 -90 20 -40 {lab=VDD}
+N 0 -90 20 -90 {lab=VDD}
 C {myopamp.sym} 20 0 0 0 {name=x1}
 C {devices/vsource.sym} -290 0 1 0 {name=VCM value="DC 0.9V" savecurrent=false}
 C {devices/code_shown.sym} 240 120 0 0 {name=s1 only_toplevel=false value="

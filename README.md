@@ -29,7 +29,7 @@ bun run dev
 DC Gain: 22.88 dB (Target: ≥20 dB)
 Input Offset: 4.999 mV (Target: ≤5 mV)
 CMRR: 76.58 dB (Target: ≥40 dB)
-Input Impedance: >1.00 MΩ (Target: ≥1 MΩ)
+Input Impedance: 1.00 MΩ (Target: ≥1 MΩ)
 Output Impedance: 0.715 kΩ (Target: ≤1 kΩ)
 Power Consumption: 0.08 mW (Target: ≤5 mW)
 3dB Bandwidth: 0.00463 MHz
