@@ -2,6 +2,21 @@
 
 A template for mixed-signal ASIC design using open-source tools, featuring automated workflows for digital, analog, and integration for TinyTapeout chip projects.
 
+## Project Overview
+
+This repository is a SKY130 mixed-signal design workspace based on the UWASIC analog bootcamp flow. It collects the schematic, simulation, layout, and verification files used to build and check a two-stage operational amplifier with open-source EDA tools.
+
+The main completed example is `myopamp`, a two-stage op-amp designed in Xschem, simulated through generated SPICE testbenches, and taken through a draft physical-layout verification flow. The repo includes the schematic source, generated SPICE netlist, performance summary, generated GDS layout, KLayout DRC report, extracted layout netlist, and a normalized KLayout LVS reference wrapper.
+
+The purpose of the project is to demonstrate the full analog IC design loop:
+
+- create and simulate a SKY130 transistor-level schematic
+- verify basic op-amp performance targets
+- produce a routed GDS layout draft
+- run SKY130 design-rule checking
+- run layout-versus-schematic comparison
+- keep the resulting design artifacts organized for review and GitHub submission
+
 ## Documentation
 
 **Full documentation is available in the [`docs/`](./docs) directory.**
@@ -70,3 +85,5 @@ klayout analog/bootcamp_opamp/layout/myopamp/myopamp_sky130_routed_draft.gds
 ```
 
 The layout is a generated/routed draft. The normalized LVS wrapper expands device multiplicity and aligns SKY130 primitive naming, substrate naming, and units with KLayout extraction.
+
+
