@@ -4,6 +4,10 @@ A template for mixed-signal ASIC design using open-source tools, featuring autom
 
 ## Project Overview
 
+<img width="1774" height="1048" alt="image" src="https://github.com/user-attachments/assets/254feadc-b430-488a-a8be-2f69f4794900" />
+<img width="972" height="504" alt="image" src="https://github.com/user-attachments/assets/5581f882-77d3-4f3e-b783-c4d393cfffc5" />
+
+
 This repository is a SKY130 mixed-signal design workspace based on the UWASIC analog bootcamp flow. It collects the schematic, simulation, layout, and verification files used to build and check a two-stage operational amplifier with open-source EDA tools.
 
 The main completed example is `myopamp`, a two-stage op-amp designed in Xschem, simulated through generated SPICE testbenches, and taken through a draft physical-layout verification flow. The repo includes the schematic source, generated SPICE netlist, performance summary, generated GDS layout, KLayout DRC report, extracted layout netlist, and a normalized KLayout LVS reference wrapper.
