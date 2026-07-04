@@ -1,0 +1,17 @@
+* Normalized LVS reference for KLayout comparison.
+* Derived from the schematic topology, expanded to the primitive device form
+* extracted by the SKY130 KLayout LVS deck.
+.subckt myopamp_sky130_routed_draft VIN_N VIN_P VBIAS VOUT VDD VSS sky130_gnd
+C1 net3 VOUT sky130_fd_pr__model__cap_mim C=2.627568e-13 A=131.3784e-12 P=46.12e-6
+M5 net1 VBIAS VSS sky130_gnd sky130_fd_pr__nfet_01v8 L=1e-6 W=0.47e-6 AS=0.2115e-12 AD=0.2115e-12 PS=1.84e-6 PD=1.84e-6
+M3 net2 net2 VDD VDD sky130_fd_pr__pfet_01v8 L=1e-6 W=0.9e-6 AS=0.405e-12 AD=0.405e-12 PS=2.7e-6 PD=2.7e-6
+M4 net3 net2 VDD VDD sky130_fd_pr__pfet_01v8 L=1e-6 W=0.9e-6 AS=0.405e-12 AD=0.405e-12 PS=2.7e-6 PD=2.7e-6
+M1 net2 VIN_N net1 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.5e-6 W=0.42e-6 AS=0.189e-12 AD=0.189e-12 PS=1.74e-6 PD=1.74e-6
+M2 net3 VIN_P net1 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.5e-6 W=0.42e-6 AS=0.189e-12 AD=0.189e-12 PS=1.74e-6 PD=1.74e-6
+M7A VOUT VBIAS VSS sky130_gnd sky130_fd_pr__nfet_01v8 L=1e-6 W=48.29e-6 AS=21.7305e-12 AD=21.7305e-12 PS=97.48e-6 PD=97.48e-6
+M7B VOUT VBIAS VSS sky130_gnd sky130_fd_pr__nfet_01v8 L=1e-6 W=48.29e-6 AS=21.7305e-12 AD=21.7305e-12 PS=97.48e-6 PD=97.48e-6
+M7C VOUT VBIAS VSS sky130_gnd sky130_fd_pr__nfet_01v8 L=1e-6 W=48.29e-6 AS=21.7305e-12 AD=21.7305e-12 PS=97.48e-6 PD=97.48e-6
+M6A VOUT net3 VDD VDD sky130_fd_pr__pfet_01v8 L=0.5e-6 W=52.38e-6 AS=23.571e-12 AD=23.571e-12 PS=105.66e-6 PD=105.66e-6
+M6B VOUT net3 VDD VDD sky130_fd_pr__pfet_01v8 L=0.5e-6 W=52.38e-6 AS=23.571e-12 AD=23.571e-12 PS=105.66e-6 PD=105.66e-6
+M6C VOUT net3 VDD VDD sky130_fd_pr__pfet_01v8 L=0.5e-6 W=52.38e-6 AS=23.571e-12 AD=23.571e-12 PS=105.66e-6 PD=105.66e-6
+.ends myopamp_sky130_routed_draft

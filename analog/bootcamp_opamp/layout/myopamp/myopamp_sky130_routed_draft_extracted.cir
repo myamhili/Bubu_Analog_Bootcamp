@@ -1,0 +1,27 @@
+* Extracted by KLayout with SKY130 LVS runset on : 03/07/2026 21:22
+
+.SUBCKT myopamp_sky130_routed_draft VIN_N VIN_P VBIAS VOUT VDD VSS sky130_gnd
+C$1 \$I82 VOUT sky130_fd_pr__model__cap_mim C=2.627568e-13 A=131.3784 P=46.12
+M$2 \$I43 VBIAS VSS sky130_gnd sky130_fd_pr__nfet_01v8 L=1 W=0.47 AS=0.2115
++ AD=0.2115 PS=1.84 PD=1.84
+M$3 \$I57 \$I57 VDD VDD sky130_fd_pr__pfet_01v8 L=1 W=0.9 AS=0.405 AD=0.405
++ PS=2.7 PD=2.7
+M$4 \$I82 \$I57 VDD VDD sky130_fd_pr__pfet_01v8 L=1 W=0.9 AS=0.405 AD=0.405
++ PS=2.7 PD=2.7
+M$5 \$I57 VIN_N \$I43 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.5 W=0.42 AS=0.189
++ AD=0.189 PS=1.74 PD=1.74
+M$6 \$I82 VIN_P \$I43 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.5 W=0.42 AS=0.189
++ AD=0.189 PS=1.74 PD=1.74
+M$7 VOUT VBIAS VSS sky130_gnd sky130_fd_pr__nfet_01v8 L=1 W=48.29 AS=21.7305
++ AD=21.7305 PS=97.48 PD=97.48
+M$8 VOUT VBIAS VSS sky130_gnd sky130_fd_pr__nfet_01v8 L=1 W=48.29 AS=21.7305
++ AD=21.7305 PS=97.48 PD=97.48
+M$9 VOUT VBIAS VSS sky130_gnd sky130_fd_pr__nfet_01v8 L=1 W=48.29 AS=21.7305
++ AD=21.7305 PS=97.48 PD=97.48
+M$10 VOUT \$I82 VDD VDD sky130_fd_pr__pfet_01v8 L=0.5 W=52.38 AS=23.571
++ AD=23.571 PS=105.66 PD=105.66
+M$11 VOUT \$I82 VDD VDD sky130_fd_pr__pfet_01v8 L=0.5 W=52.38 AS=23.571
++ AD=23.571 PS=105.66 PD=105.66
+M$12 VOUT \$I82 VDD VDD sky130_fd_pr__pfet_01v8 L=0.5 W=52.38 AS=23.571
++ AD=23.571 PS=105.66 PD=105.66
+.ENDS myopamp_sky130_routed_draft

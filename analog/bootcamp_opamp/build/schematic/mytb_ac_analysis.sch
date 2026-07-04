@@ -21,6 +21,8 @@ N -60 60 -60 160 {lab=#net1}
 N -260 0 -210 0 {lab=#net2}
 N -210 0 -210 50 {lab=#net2}
 N -210 -50 -210 0 {lab=#net2}
+N -210 50 -210 140 {lab=#net2}
+N -150 50 -150 140 {lab=VIN_P}
 C {myopamp.sym} 20 0 0 0 {name=x1}
 C {devices/vsource.sym} -290 0 1 0 {name=VCM value="DC 0.9V" savecurrent=false}
 C {devices/code_shown.sym} 240 120 0 0 {name=s1 only_toplevel=false value="
@@ -29,19 +31,20 @@ C {devices/code_shown.sym} 240 120 0 0 {name=s1 only_toplevel=false value="
 .control
 run
 plot vdb(VOUT)
+meas ac dc_gain_db FIND vdb(VOUT) AT=0.1
 .endc
 "}
 C {sky130_fd_pr/corner.sym} 300 -100 0 0 {name=CORNER only_toplevel=false corner=tt}
 C {devices/lab_pin.sym} 160 0 1 0 {name=p1 sig_type=std_logic lab=VOUT}
-C {devices/lab_pin.sym} -150 50 3 0 {name=p2 sig_type=std_logic lab=VIN_P}
-C {devices/lab_pin.sym} -150 -50 3 0 {name=p3 sig_type=std_logic lab=VIN_N}
+C {devices/lab_pin.sym} -150 50 1 0 {name=p2 sig_type=std_logic lab=VIN_P}
+C {devices/lab_pin.sym} -150 -50 1 0 {name=p3 sig_type=std_logic lab=VIN_N}
 C {devices/vsource.sym} 30 -90 3 0 {name=VDD value="DC 1.8V" savecurrent=false}
 C {devices/gnd.sym} 60 -90 3 0 {name=l6 lab=GND}
 C {devices/lab_pin.sym} 0 -90 1 0 {name=p4 sig_type=std_logic lab=VDD}
 C {devices/vsource.sym} -30 160 3 0 {name=VBIAS value="DC 0.6V" savecurrent=false}
 C {devices/capa.sym} 140 30 0 0 {name=C1 m=1 value=1p footprint=1206 device="ceramic capacitor"}
 C {devices/gnd.sym} 140 60 0 0 {name=l1 lab=GND}
-C {devices/vsource.sym} -180 50 1 0 {name=VDIFF value="dc 0 ac 1" savecurrent=true}
+C {devices/vsource.sym} -180 140 1 0 {name=VDIFF value="dc 0 ac 1" savecurrent=true}
 C {devices/res.sym} -180 -50 1 0 {name=R1 value=1Meg}
 C {devices/res.sym} -180 50 1 0 {name=R2 value=1Meg}
 C {devices/gnd.sym} -320 0 0 0 {name=l_gnd_vcm lab=GND}

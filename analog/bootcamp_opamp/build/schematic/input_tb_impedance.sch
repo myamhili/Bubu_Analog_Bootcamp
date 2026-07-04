@@ -21,6 +21,8 @@ N -210 0 -210 50 {lab=#net2}
 N -210 -50 -210 0 {lab=#net2}
 N 20 -90 20 -40 {lab=VDD}
 N 0 -90 20 -90 {lab=VDD}
+N -210 50 -210 120 {lab=#net2}
+N -150 50 -150 120 {lab=VIN_P}
 C {myopamp.sym} 20 0 0 0 {name=x1}
 C {devices/vsource.sym} -290 0 1 0 {name=VCM value="DC 0.9V" savecurrent=false}
 C {devices/code_shown.sym} 240 120 0 0 {name=s1 only_toplevel=false value="
@@ -43,7 +45,7 @@ C {devices/lab_pin.sym} 0 -90 1 0 {name=p4 sig_type=std_logic lab=VDD}
 C {devices/vsource.sym} -30 160 3 0 {name=VBIAS value="DC 0.6V" savecurrent=false}
 C {devices/capa.sym} 140 30 0 0 {name=C1 m=1 value=1p footprint=1206 device="ceramic capacitor"}
 C {devices/gnd.sym} 140 60 0 0 {name=l1 lab=GND}
-C {devices/vsource.sym} -180 50 1 0 {name=VDIFF value="dc 0 ac 1" savecurrent=true}
+C {devices/vsource.sym} -180 120 1 0 {name=VDIFF value="dc 0 ac 1" savecurrent=true}
 C {devices/res.sym} -180 -50 1 0 {name=R1 value=1Meg}
 C {devices/res.sym} -180 50 1 0 {name=R2 value=1Meg}
 C {devices/gnd.sym} -320 0 0 0 {name=l_gnd_vcm lab=GND}

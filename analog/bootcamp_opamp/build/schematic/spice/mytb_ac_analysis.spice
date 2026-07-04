@@ -17,6 +17,7 @@ R2 VIN_P net2 1Meg m=1
 .control
 run
 plot vdb(VOUT)
+meas ac dc_gain_db FIND vdb(VOUT) AT=0.1
 .endc
 
 
